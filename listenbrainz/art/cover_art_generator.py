@@ -315,16 +315,6 @@ class CoverArtGenerator:
             the artist stats and metadata about this user/stats. The metadata dict contains
             user_name, date, time_range and num_artists. """
         
-        if user_name == "huhridge":
-            artists = [{"artist_mbid":"e520459c-dff4-491d-a6e4-c97be35e0044","artist_name":"Frank Ocean","listen_count":20},{"artist_mbid":"875203e1-8e58-4b86-8dcb-7190faf411c5","artist_name":"J. Cole","listen_count":13},{"artist_mbid":"e636b15f-00c5-45fd-9c33-845a08c8f92d","artist_name":"brakence","listen_count":10},{"artist_mbid":"9fff2f8a-21e6-47de-a2b8-7f449929d43f","artist_name":"Drake","listen_count":9},{"artist_mbid":"ab1a3f85-e0ea-470a-af5c-175447ae774c","artist_name":"underscores","listen_count":8},{"artist_mbid":"aea4c9b9-9f8d-49dc-b2ca-57d6f26e8634","artist_name":"Khruangbin","listen_count":8},{"artist_mbid":"3fd78e94-efeb-43a1-bc19-ad2dd1afbd5a","artist_name":"EDEN","listen_count":8},{"artist_mbid":"f6beac20-5dfe-4d1f-ae02-0b0a740aafd6","artist_name":"Tyler, the Creator","listen_count":7},{"artist_mbid":"260b6184-8828-48eb-945c-bc4cb6fc34ca","artist_name":"Charli XCX","listen_count":7},{"artist_mbid":"f1660eaa-929f-48d4-9926-9aaa61afa52f","artist_name":"Teezo Touchdown","listen_count":6},{"artist_mbid":"ab4e7869-86f5-455e-b52c-c89d7664c07b","artist_name":"Rainbow Kitten Surprise","listen_count":6},{"artist_mbid":"071409d0-ce21-4f03-a111-aec4dbc1590d","artist_name":"Erika de Casier","listen_count":6},{"artist_mbid":"381086ea-f511-4aba-bdf9-71c753dc5077","artist_name":"Kendrick Lamar","listen_count":5},{"artist_mbid":"8dc08b1f-e393-4f85-a5dd-300f7693a8b8","artist_name":"James Blake","listen_count":5},{"artist_mbid":"null","artist_name":"\u00a5$, Kanye West, Ty Dolla $ign","listen_count":4},{"artist_mbid":"164f0d73-1234-4e2c-8743-d77bf2191051","artist_name":"Ye","listen_count":4},{"artist_mbid":"61af87f4-16ee-4431-8504-cc06187079fb","artist_name":"XXXTENTACION","listen_count":4},{"artist_mbid":"926ea44c-0efa-455a-b7ce-00ccb5a86cb7","artist_name":"Kyle Dion","listen_count":4},{"artist_mbid":"00d0f0fa-a48c-416d-b4ff-25a290ce82d8","artist_name":"half\u2022alive","listen_count":3},{"artist_mbid":"8032cf05-d916-4b2a-9c53-6e75d4a24bd8","artist_name":"Trippie Redd","listen_count":3},{"artist_mbid":"87b9b3b8-ab93-426c-a200-4012d667a626","artist_name":"The War on Drugs","listen_count":3},{"artist_mbid":"aa5a6061-e60d-4a58-b9f6-c09de390bb2d","artist_name":"PnB Rock","listen_count":3},{"artist_mbid":"592da4c4-9618-4a1a-a944-e60c05c39037","artist_name":"Patrick Watson","listen_count":3},{"artist_mbid":"aa2c5e55-57f5-42a7-a0e4-4a02cd9399b1","artist_name":"Oh Wonder","listen_count":3},{"artist_mbid":"dde26295-8cd4-474c-8740-3edb801b2776","artist_name":"Maggie Rogers","listen_count":3}];
-
-            metadata = {
-                "user_name": user_name,
-                "date": datetime.datetime.now().strftime("%Y-%m-%d"),
-                "time_range": self.time_range_to_english[time_range],
-                "num_artists": 128
-            }
-            return artists, metadata       
         artists, total_count = self.download_user_stats("artists", user_name, time_range)
         metadata = {
             "user_name": user_name,
