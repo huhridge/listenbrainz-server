@@ -7,9 +7,11 @@
     {% endif %}
     <a href="https://{{ host }}.org/{{ entity }}/{{ mbid }}" target="_blank">
       {{ name }}
+      <title>{{ name }}</title>
     </a>
   {%- else -%}
     {{ name }}
+    <title>{{ name }}</title>
   {%- endif -%}
 {% endmacro %}
 
